@@ -1,0 +1,35 @@
+Za sledece zadatke chatgpt generise standardnu sintaksu provjere if i else uslovima dok je to moguce krace uraditi upotrebom ternarnom sintaksom, tj.
+# Zadatak 1: Provjera da li je broj paran
+def provjeri_paran_broj(broj):
+    # if broj % 2 == 0:
+    #     print("Portal se otvara!")
+    # else:
+    #     print("Portal ostaje zatvoren.")
+    print("Portal se otvara!" if broj % 2 == 0 else "Portal ostaje zatvoren")
+
+# Zadatak 2: Provjera ko je ubrao više jabuka
+def pobjednik_u_berbi_jabuka(p, m):
+        print("Pobjednik je Petar!" if p > m else "Pobjednik je Miloš!")
+
+# Zadatak 3: Provjera uslova za pristup ispitu
+def provjeri_pristup_ispitu(prisustvo, seminarski):
+    print("Student može pristupiti ispitu." if prisustvo > 75 and seminarski == 1 else "Student ne može pristupiti ispitu.")
+
+U zadatku 34 zakomentarisani djelovi su ono sto je uradio chatgpt a nekomentarisani kod je optimalnija verzija koju sam ja napisao, chatgpt je koristio 2 traverzije, a zadatak je moguce uraditi sa jednom
+# Zadatak 34: Računanje proizvoda cifara iz teksta
+def proizvod_cifara_iz_teksta(tekst):
+    # cifre = [int(cifra) for cifra in tekst if cifra.isdigit()]
+    proizvod = 1
+    # for cifra in cifre:
+    #     proizvod *= cifra
+    for cifra in tekst:
+        if cifra.isdigit():
+            proizvod *= int(cifra) 
+    return proizvod
+
+u ovom zadatku ispod chatgpt vraca samo kreirani broj, ne vraca koliko ima cifara, tj. duzinu stringa, sto predstavlja lose razumijevanje zadatka
+
+# Zadatak 35: Broj cifara u stringu i kreiranje integera od njih
+def broj_cifara_i_kreiranje_integera(tekst):
+    broj_cifara = ''.join(cifra for cifra in tekst if cifra.isdigit())
+    return int(broj_cifara), len(broj_cifara)
