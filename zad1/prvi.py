@@ -6,7 +6,7 @@ passenger_ids = []
 data = []
 sum = 0
 
-with open('test/zad1/test.xls', newline='') as csvfile:
+with open('DomaciZadaci/zad1/test.xls', newline='') as csvfile:
     reader = csv.reader(csvfile)
     next(reader)
     for row in reader:
@@ -23,9 +23,3 @@ normalised_ids = [(id - minId) / (maxId - minId) for id in passenger_ids]
 print(minId, maxId, average_value, percentage_difference)
 print(normalised_ids)
 
-# Read data from CSV file
-data = []
-with open('test/zad1/test.xls', newline='') as csvfile:
-    reader = csv.DictReader(csvfile)
-    for row in reader:
-        data.append(row)
